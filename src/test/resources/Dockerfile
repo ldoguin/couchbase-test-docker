@@ -52,6 +52,9 @@ RUN chrpath -r '$ORIGIN/../lib' /opt/couchbase/bin/curl
 
 # Add bootstrap script
 COPY scripts/entrypoint.sh /
+RUN chmod +x /entrypoint.sh
+RUN chmod +x /usr/local/bin/dummy.sh
+RUN chmod +x /etc/service/couchbase-server/run
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["couchbase-server"]
 

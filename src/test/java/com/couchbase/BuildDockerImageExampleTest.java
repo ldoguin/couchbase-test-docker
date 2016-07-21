@@ -22,10 +22,11 @@ public class BuildDockerImageExampleTest {
     @ClassRule
     public static GenericContainer couchbase =
             new GenericContainer(
-                    new ImageFromDockerfile("mycouchbase").withFileFromClasspath("Dockerfile", "Dockerfile")
+                    new ImageFromDockerfile().withFileFromClasspath("Dockerfile", "Dockerfile")
                     .withFileFromClasspath("scripts/dummy.sh","scripts/dummy.sh")
                             .withFileFromClasspath("scripts/entrypoint.sh","scripts/entrypoint.sh")
                             .withFileFromClasspath("scripts/run","scripts/run")
+
             )
                     .withExposedPorts(8091, 8092, 8093, 8094, 11207, 11210, 11211, 18091, 18092, 18093)
                     .waitingFor(new CouchbaseWaitStrategy());
