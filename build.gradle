@@ -20,8 +20,8 @@ repositories {
 
 
 dependencies {
-  compile "org.testcontainers:testcontainers:1.1.0"
-  testCompile "com.couchbase.client:java-client:2.2.5",
+  compile "org.testcontainers:testcontainers:1.1.6"
+  testCompile "com.couchbase.client:java-client:2.3.3",
               "junit:junit:4.12"
   runtime "org.slf4j:slf4j-simple:1.7.12"
 

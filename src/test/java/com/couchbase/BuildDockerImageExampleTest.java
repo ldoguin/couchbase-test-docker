@@ -39,7 +39,6 @@ public class BuildDockerImageExampleTest {
                 .bootstrapCarrierSslPort(couchbase.getMappedPort(11207))
                 .bootstrapHttpDirectPort(couchbase.getMappedPort(8091))
                 .bootstrapHttpSslPort(couchbase.getMappedPort(18091))
-                .queryPort(couchbase.getMappedPort(8093))
                 .build();
         CouchbaseCluster cc = CouchbaseCluster.create(env);
         ClusterManager cm = cc.clusterManager("Administrator", "password");

@@ -1,0 +1,4 @@
+INSERT INTO product (KEY, VALUE) VALUES ("odwalla-juice1",
+      { "productId": "odwalla-juice1", "unitPrice": 4.40, "type": "product", "color":"green"}) RETURNING * ;
+INSERT INTO product (KEY, VALUE) VALUES ("odwalla-juice2",
+      { "productId": "odwalla-juice2", "unitPrice": 4.40, "type": "product", "color":"green"}) RETURNING * ;
